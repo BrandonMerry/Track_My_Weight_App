@@ -67,3 +67,7 @@ async function markIncomplete() {
     console.log(err);
   }
 }
+
+$('.message a').click(function(){
+  $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+});
