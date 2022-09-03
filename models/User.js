@@ -5,9 +5,9 @@ const UserSchema = new mongoose.Schema({
   userName: { type: String, unique: true },
   email: { type: String, unique: true },
   password: String,
-  initialWeight: { type: Number, unique: true },
-  goalWeight: { type: Number, unique: true },
-  age: { type: Number, unique: true },
+  initialWeight: { type: Number, unique: false },
+  goalWeight: { type: Number, unique: false },
+  age: { type: Number, unique: false },
 });
 
 // Password hash middleware.
