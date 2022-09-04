@@ -7,17 +7,16 @@
         <input type="submit">
     </form>
 
-    <h3>Your current weights</h3>
-    <ul>
+    <h3>Your current tracked weights</h3>
+    <ul class="tracked-weights">
     <% weights.forEach( el => { %>
-            <li class='weightItem' data-id='<%=el._id%>'>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.currentWeight %></span><br>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.date %></span><br>
-                <span class='del'> Delete </span>
+            <li class='cell' data-id='<%=el._id%>'>
+                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.currentWeight %></span>
+                <!-- <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.date %></span><br> -->
+                <!-- <span class='del'> Delete </span> -->
             </li>
     <% }) %>    
     </ul>
-
 
 
     
