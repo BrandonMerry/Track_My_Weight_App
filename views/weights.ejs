@@ -1,21 +1,24 @@
 <%- include('partials/head') %>
 <body>
-    <h1>Your current weights</h1>
-    <ul>
-    <% weights.forEach( el => { %>
-            <li class='weightItem' data-id='<%=el._id%>'>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.currentWeight %></span>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.date %></span>
-                <span class='del'> Delete </span>
-            </li>
-    <% }) %>    
-    </ul>
-
+    <h1>Please enter your weight for today:</h1>
     <form action="/weights/createWeight" method='POST'>
         <input type="text" placeholder="Enter your current weight" name='weightItem'>
         <input type="date" name="date" id="date" value="2022-06-01">
         <input type="submit">
     </form>
+
+    <h3>Your current weights</h3>
+    <ul>
+    <% weights.forEach( el => { %>
+            <li class='weightItem' data-id='<%=el._id%>'>
+                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.currentWeight %></span><br>
+                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.date %></span><br>
+                <span class='del'> Delete </span>
+            </li>
+    <% }) %>    
+    </ul>
+
+
 
     
 
