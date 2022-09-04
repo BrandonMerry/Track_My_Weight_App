@@ -24,7 +24,7 @@ ul > li {
   width: 350px;
 }
 
-#footer {
+footer {
   position: fixed;
   bottom: 0;
   width: 100%;
