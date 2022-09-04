@@ -1,21 +1,21 @@
-const deleteBtn = document.querySelectorAll('.del');
+const cells = document.querySelectorAll('.cell');
 const weightItem = document.querySelectorAll('span.not');
 const weightComplete = document.querySelectorAll('span.completed');
 
-Array.from(deleteBtn).forEach((el) => {
+Array.from(cells).forEach((el) => {
   el.addEventListener('click', deleteWeight);
 });
 
-Array.from(weightItem).forEach((el) => {
-  el.addEventListener('click', markComplete);
-});
+// Array.from(weightItem).forEach((el) => {
+//   el.addEventListener('click', markComplete);
+// });
 
-Array.from(weightComplete).forEach((el) => {
-  el.addEventListener('click', markIncomplete);
-});
+// Array.from(weightComplete).forEach((el) => {
+//   el.addEventListener('click', markIncomplete);
+// });
 
 async function deleteWeight() {
-  const weightId = this.parentNode.dataset.id;
+  const weightId = this.dataset.id;
   try {
     const response = await fetch('weights/deleteWeight', {
       method: 'delete',
@@ -68,6 +68,6 @@ async function markIncomplete() {
   }
 }
 
-$('.message a').click(function(){
-  $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+$('.message a').click(function () {
+  $('form').animate({ height: 'toggle', opacity: 'toggle' }, 'slow');
 });
