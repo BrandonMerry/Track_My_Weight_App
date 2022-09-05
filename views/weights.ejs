@@ -1,5 +1,6 @@
-<%- include('partials/head') %>
+<%- include('partials/head', {title :'Enter your daily weight'}) %>
 <%- include('partials/header') %>
+
 <body>
     <% if (user) { %>
         <h1>Hello <%= user.userName %>, </h1>
@@ -10,7 +11,7 @@
         <input type="date" name="date" id="date" value="2022-06-01">
         <input type="submit">
     </form>
-    <br>
+
     <h3>Your current tracked weights</h3>
     <ul class="tracked-weights">
     <% weights.forEach( el => { %>
@@ -22,12 +23,8 @@
     <% }) %>    
     </ul>
 
-    
-
-
-    
-
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 <%- include("partials/footer") %>
