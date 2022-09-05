@@ -1,12 +1,16 @@
 <%- include('partials/head') %>
+<%- include('partials/header') %>
 <body>
-    <h1>Please enter your weight for today:</h1>
+    <% if (user) { %>
+        <h1>Hello <%= user.userName %>, </h1>
+      <% } %>
+    <h2>Please enter your weight for today:</h2>
     <form action="/weights/createWeight" method='POST'>
         <input type="text" placeholder="Enter your current weight" name='weightItem'>
         <input type="date" name="date" id="date" value="2022-06-01">
         <input type="submit">
     </form>
-
+    <br>
     <h3>Your current tracked weights</h3>
     <ul class="tracked-weights">
     <% weights.forEach( el => { %>
@@ -17,6 +21,8 @@
             </li>
     <% }) %>    
     </ul>
+
+    
 
 
     
