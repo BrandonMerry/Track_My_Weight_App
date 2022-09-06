@@ -78,6 +78,25 @@ footer {
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
+input[type=date], select {
+  width: 8%;
+  padding: 6px 10px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=text], select {
+  width: 8%;
+  padding: 6px 10px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
 .form input {
   font-family: 'Roboto', sans-serif;
   outline: 0;
@@ -170,7 +189,6 @@ body {
 
 .tracked-weights {
   width: 20em;
-
   display: flex;
   flex-direction: row;
   gap: 0.2em;
