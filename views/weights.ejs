@@ -17,13 +17,13 @@
 
     <h3>Your current tracked weights</h3>
     <ul class="tracked-weights">
-    <% weights.forEach( el => { %>
-            <li class='cell' data-id='<%=el._id%>'>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.currentWeight %></span>
-                <!-- <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.date %></span> -->
-                <!-- <span class='del'> Delete </span> -->
-            </li>
-    <% }) %>    
+        <% weights.forEach( el => { %>
+                <li class='cell' data-id='<%=el._id%>'>
+                    <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.currentWeight %></span>
+                    <!-- <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.date %></span> -->
+                    <!-- <span class='del'> Delete </span> -->
+                </li>
+        <% }) %>    
     </ul>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
