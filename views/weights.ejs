@@ -15,7 +15,8 @@
         <input type="submit">
     </form>
 
-    <h3>Your current tracked weights</h3>
+    <div class="mt-lg">
+    <h5>Your current tracked weights</h5>
     <ul class="tracked-weights">
         <% weights.forEach( el => { %>
                 <li class='cell' data-id='<%=el._id%>'>
@@ -25,6 +26,7 @@
                 </li>
         <% }) %>    
     </ul>
+    </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
